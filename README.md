@@ -38,7 +38,15 @@ Gastos: - S/ 2,200
 <details>
 <summary>🗂️ Categorías de gastos</summary>
 
-🛒 Alimentación · 🚌 Transporte · 🏠 Vivienda · 💊 Salud · 🎮 Entretenimiento · 👗 Ropa · 📚 Educación · 💡 Servicios · 📦 Otro
+-🛒 Alimentación  
+- 🚌 Transporte
+- 🏠 Vivienda 
+- 💊 Salud 
+- 🎮 Entretenimiento
+- 👗 Ropa 
+- 📚 Educación 
+- 💡 Servicios 
+- 📦 Otro
 
 </details>
 
