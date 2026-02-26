@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BudgetWise — Presupuesto Personal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Budget<span>Wise</span></div>
+      <div class="header-right">
+        <div class="month-selector">
+          <button class="month-btn" id="prev-month">&#8592;</button>
+          <span id="month-label">—</span>
+          <button class="month-btn" id="next-month">&#8594;</button>
+        </div>
+        <button class="btn-clear" id="btn-clear">Limpiar mes</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="summary-row">
+      <div class="summary-card income">
+        <div class="summary-icon">↑</div>
+        <div class="summary-info">
+          <span class="summary-label">Ingresos</span>
+          <span class="summary-value" id="total-income">S/ 0.00</span>
+        </div>
+      </div>
+      <div class="summary-card expenses">
+        <div class="summary-icon">↓</div>
+        <div class="summary-info">
+          <span class="summary-label">Gastos</span>
+          <span class="summary-value" id="total-expenses">S/ 0.00</span>
+        </div>
+      </div>
+      <div class="summary-card balance">
+        <div class="summary-icon">◈</div>
+        <div class="summary-info">
+          <span class="summary-label">Balance</span>
+          <span class="summary-value" id="total-balance">S/ 0.00</span>
+        </div>
+      </div>
+      <div class="summary-card savings">
+        <div class="summary-icon">%</div>
+        <div class="summary-info">
+          <span class="summary-label">Tasa de ahorro</span>
+          <span class="summary-value" id="savings-rate">0%</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-labels">
+        <span>Gastado del ingreso</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </section>
+
+    <div class="main-grid">
+
+      <section class="form-section">
+        <h2 class="section-title">Nueva transacción</h2>
+        <div class="type-tabs">
+          <button class="type-tab active" data-type="expense">Gasto</button>
+          <button class="type-tab" data-type="income">Ingreso</button>
+        </div>
+        <div class="form-fields">
+          <div class="field">
+            <label>Descripción</label>
+            <input type="text" id="desc-input" placeholder="Ej: Supermercado" maxlength="50" />
+          </div>
+          <div class="field">
+            <label>Monto (S/)</label>
+            <input type="number" id="amount-input" placeholder="0.00" min="0" step="0.01" />
+          </div>
+          <div class="field" id="category-field">
+            <label>Categoría</label>
+            <select id="category-input">
+              <option value="alimentacion">🛒 Alimentación</option>
+              <option value="transporte">🚌 Transporte</option>
+              <option value="vivienda">🏠 Vivienda</option>
+              <option value="salud">💊 Salud</option>
+              <option value="entretenimiento">🎮 Entretenimiento</option>
+              <option value="ropa">👗 Ropa</option>
+              <option value="educacion">📚 Educación</option>
+              <option value="servicios">💡 Servicios</option>
+              <option value="otro">📦 Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Fecha</label>
+            <input type="date" id="date-input" />
+          </div>
+        </div>
+        <button class="btn-add" id="btn-add">+ Agregar transacción</button>
+      </section>
+
+      <section class="chart-section">
+        <h2 class="section-title">Gastos por categoría</h2>
+        <div class="chart-wrap">
+          <canvas id="donut-canvas" width="200" height="200"></canvas>
+          <div class="donut-center">
+            <span class="donut-label">Total gastos</span>
+            <span class="donut-value" id="donut-total">S/ 0</span>
+          </div>
+        </div>
+        <div class="legend" id="chart-legend"></div>
+      </section>
+
+      <section class="list-section">
+        <div class="list-header">
+          <h2 class="section-title">Transacciones</h2>
+          <div class="list-filters">
+            <button class="filter-btn active" data-filter="all">Todo</button>
+            <button class="filter-btn" data-filter="expense">Gastos</button>
+            <button class="filter-btn" data-filter="income">Ingresos</button>
+          </div>
+        </div>
+        <div class="transaction-list" id="transaction-list"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>BudgetWise &mdash; Tus datos se guardan localmente en tu navegador</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
