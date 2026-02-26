@@ -65,5 +65,4 @@ Los datos se guardan en el `localStorage` de tu navegador, organizados por mes:
 
 ```bash
 git clone https://github.com/jhoandryA/EquilibrioS.git
-cd EquilibrioS
-# Abre index.html en tu navegador — no necesitas instalar nada
+# Abre https://jhoandrya.github.io/EquilibrioS/ en tu navegador — no necesitas instalar nada
