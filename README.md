@@ -46,3 +46,24 @@ Gastos: - S/ 2,200
 <summary>💾 Persistencia de datos</summary>
 
 Los datos se guardan en el `localStorage` de tu navegador, organizados por mes:  
+
+✅ Sin servidor ni base de datos  
+✅ Sin cuenta ni registro  
+✅ Funciona offline después de la primera carga  
+⚠️ Si limpias el navegador, se borran los datos
+
+</details>
+
+<details>
+<summary>📁 Estructura del proyecto</summary>
+
+
+</details>
+
+<details>
+<summary>🚀 Usar localmente</summary>
+
+```bash
+git clone https://github.com/jhoandryA/EquilibrioS.git
+cd EquilibrioS
+# Abre index.html en tu navegador — no necesitas instalar nada
