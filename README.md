@@ -55,16 +55,6 @@ Los datos se guardan en el `localStorage` de tu navegador, organizados por mes:
 </details>
 
 <details>
-<summary>📁 Estructura del proyecto</summary>
-Equilibrio$/
-├── index.html → Estructura de la página
-├── style.css → Estilos y diseño visual
-├── app.js → Lógica, cálculos y localStorage
-└── README.md
-
-</details>
-
-<details>
 <summary>🚀 Usar localmente</summary>
 
 ```bash
